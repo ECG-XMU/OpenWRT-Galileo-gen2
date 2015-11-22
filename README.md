@@ -13,9 +13,9 @@ The kernel image: " /../build_dir/target-i386_i486_uClibc-0.9.33.2/linux-x86_gal
 
 The cross-compiler: " /../staging_dir/toolchain-i386_i486_gcc-4.8-linaro_uClibc-0.9.33.2/"
 
-How to work?
+How to use?
 
-you only have on your tf card the following files: Root folder:
+put the following files to your tf card:
 
 /boot/grub/grub.conf
 
@@ -25,7 +25,7 @@ you only have on your tf card the following files: Root folder:
 
 /openwrt-x86-galileo-rootfs.cpio.gz
 
-Attention:
+Note:
 
 （1）”bzImage” is in the directory of "build_dir/target-i386_i486_uClibc-0.9.33.2/linux-x86_galileo"
 
