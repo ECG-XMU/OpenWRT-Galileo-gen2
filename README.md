@@ -31,27 +31,5 @@ Note:
 
 （2） the root filesystem "openwrt-x86-galileo-rootfs.cpio.gz" is in the directory of "bin/x86"
 
-（3）"boot" and "grub.efi" are from the intel galileo web http://www.intel.com/support/galileo/sb/CS-035101.htm , download the "SD-Card Linux Image". And you should modify the "grub.conf" as follow:
+（3）"boot" and "grub.efi"  download from the github  https://github.com/ECG-XMU/SDcard_grub.git
 
-
-default 1 
-
-timeout 1
-
-
-color white/blue white/cyan
-
-
-title Clanton SVP kernel-SPI initrd-SPI IMR-On IO-APIC/HPET NoEMU 
-
-kernel --spi root=/dev/ram0 console=ttyS1,115200n8 earlycon=uart8250,mmio32,$EARLY_CON_ADDR_REPLACE,115200n8 reboot=efi,warm apic=debug rw 
-
-initrd --spi
-
-title Clanton SVP kernel-MassStorage initrd-MassStorage image-full IMR-On IO-APIC/HPET NoEMU debug 
-
-root (hd0,0) 
-
-kernel /bzImage root=/dev/ram0 init=/init console=ttyS1,115200n8 earlycon=uart8250,mmio32,$EARLY_CON_ADDR_REPLACE,115200n8 reboot=efi,warm apic=debug rw LABEL=boot debugshell=5 rootimage= 
-
-initrd /openwrt-x86-galileo-rootfs.cpio.gz
