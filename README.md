@@ -5,6 +5,8 @@ OpenWRT for Intel Galileo Gen 2
 
 OpenWRT version: git-svn-id: svn://svn.openwrt.org/openwrt/trunk@42607
 
+Intel® Galileo Board Toolchain: https://downloadcenter.intel.com/download/24619/Intel-Galileo-Board-Toolchain
+
 How to Build?
 
 running "make V=99 " to build the OpenWRT firmware for Intel Galileo. When build finished, the kernel image and cross-compiler can be found in the following directory:
